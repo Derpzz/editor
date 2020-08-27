@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
+
+	<script type="text/javascript" src="codemirror/mode/xml/xml.js"></script>
+	<script type="text/javascript" src="codemirror/mode/javascript/javascript.js"></script>
+	<script type="text/javascript" src="codemirror/mode/css/css.js"></script>
+	<script type="text/javascript" src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+	<script type="text/javascript" src="codemirror/addon/edit/closetag.js"></script>
+	<script type="text/javascript" src="codemirror/addon/edit/closebrackets.js"></script>
+	<script type="text/javascript" src="codemirror/addon/search/search.js"></script>
+	<script type="text/javascript" src="codemirror/addon/search/searchcursor.js"></script>
+	<script type="text/javascript" src="codemirror/addon/dialog/dialog.js"></script>
+	<script type="text/javascript" src="codemirror/addon/hint/show-hint.js"></script>
+	<script type="text/javascript" src="codemirror/addon/hint/css-hint.js"></script>
+	<script type="text/javascript" src="codemirror/addon/hint/javascript-hint.js"></script>
+	<script type="text/javascript" src="codemirror/addon/hint/xml-hint.js"></script>
+	<script type="text/javascript" src="codemirror/addon/hint/html-hint.js"></script>
+	<script type="text/javascript" src="codemirror/addon/selection/active-line.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="index.css" />
+	<link rel="stylesheet" type="text/css" href="codemirror/lib/codemirror.css" />
+	<link rel="stylesheet" type="text/css" href="codemirror/addon/display/fullscreen.css" />
+	<link rel="stylesheet" type="text/css" href="codemirror/addon/hint/show-hint.css" />
+
+	<link rel="stylesheet" type="text/css" href="codemirror/theme/dracula.css" />
+	<link rel="stylesheet" type="text/css" href="codemirror/theme/material.css" />
+	<link rel="stylesheet" type="text/css" href="codemirror/theme/ambiance.css" />
+	<link rel="stylesheet" type="text/css" href="codemirror/theme/nord.css" />
+	<link rel="stylesheet" type="text/css" href="codemirror/theme/monokai.css" />
+
+	
+
+</head>
+<body>
+	<input id="input" type="file" />
+	<select id='modes'>
+		<option value='htmlmixed' selected>HTML</option>
+		<option value='javascript'>Javascript</option>
+		<option value='css'>CSS</option>
+	</select>
+	<select id='themes'>
+		<option value='Nord'>Nord</option>
+		<option value='material'>material</option>
+		<option value='dracula'>dracula</option>
+		<option value='ambiance'>ambiance</option>
+		<option value='monokai' selected>monokai</option>
+	</select>
+	<input id='tabIndent' type='number' min='1' value='4' />
+	<label> lineStyle </label>
+	<input class="settings_checkbox" type="checkbox" name='settings_checkbox' checked='true'/>
+	<label> autoCloseTags </label>
+	<input class="settings_checkbox" type="checkbox" name='settings_checkbox' checked='true'/>
+	<input class="settings_checkbox" type="checkbox" name='settings_checkbox' />
+	<input class="settings_checkbox" type="checkbox" name='settings_checkbox' />
+	<textarea id="editor"></textarea>
+	<iframe id="editor-preview">
+		<body class='.body'>123</body>
+	</iframe>
+	
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>
